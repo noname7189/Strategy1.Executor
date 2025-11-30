@@ -1,0 +1,12 @@
+root = true
+
+[*.cs]
+# 네이밍 규칙
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# 코드 스타일
+# csharp_style_var_for_built_in_types = true:warning
+csharp_prefer_braces = true:warning
+
+# 심각도 조정 (none, silent, suggestion, warning, error)
+dotnet_diagnostic.CS8618.severity = warning

@@ -1,0 +1,16 @@
+gitignore# Build results
+bin/
+obj/
+
+# IDE
+.vs/
+*.user
+*.suo
+
+# NuGet
+*.nupkg
+packages/
+
+# OS
+.DS_Store
+Thumbs.db
