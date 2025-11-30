@@ -39,7 +39,11 @@ namespace Strategy1.Executor.Impl.Strategies.Strategy1
         {
             ProcessTakeProfit(prevCandle.Close, prevCandle.Time);
 
-            _ = TryToMakeNewSignal();
+            ETH5M_Signal? target = TryToMakeNewSignal();
+            if (target != null)
+            {
+                ProcessEnter((decimal)target.EnterPrice, target);
+            }
         }
 
         public override void ProcessWithSameCandle(KlineStreamRawData klines)
